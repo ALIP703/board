@@ -1,0 +1,19 @@
+@import "../../../Index.scss";
+
+.button-with-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    min-width: 100px;
+    min-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-grey;
+    border-radius: 10px;
+    background-color: $text-white;
+
+    .icon {
+        padding: 5px
+    }
+}

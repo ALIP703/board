@@ -1,0 +1,411 @@
+@import '../../../Index.scss';
+
+@mixin app-name ($font-size) {
+    font-size: $font-size;
+
+    &::after {
+        content: ".";
+        position: absolute;
+
+    }
+}
+
+.sign-in-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .geometry-section {
+        height: 100vh;
+        width: 50vw;
+        color: $text-white;
+        background: $bg-blue;
+        clip-path: polygon(0 0, 99% 0, 75% 100%, 0% 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        // LOGO
+        .logo {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 6.44;
+            padding-left: 2rem;
+            letter-spacing: 0.36;
+        }
+
+        .title {
+            @include app-name(3rem);
+            text-align: center;
+            transform: translateX(-10%);
+        }
+
+        .social-media-wrapper {
+            position: relative;
+            text-align: center;
+            transform: translateX(-10%);
+            bottom: 50px;
+        }
+    }
+
+    .form-section {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+
+        .form-container {
+
+            .form-title-section {
+
+                // Sign In
+                h2 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    line-height: 1px;
+                    word-wrap: break-word
+                }
+
+                // Sign in to your account
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    word-wrap: break-word
+                }
+            }
+
+            .signing-btn-section {
+                display: flex;
+                justify-content: space-between;
+                margin: 1px 0px 10px 0px;
+
+                button:first-child {
+                    margin-right: 10px;
+                }
+            }
+
+            .form-card {
+                border-radius: 20px;
+                width: 422px;
+                padding: 15px 0px 25px 0px;
+                background-color: $text-white;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                .form {
+                    display: grid;
+                    grid-row-gap: 15px;
+                }
+
+                .form-field-wrapper {
+                    display: grid;
+                    grid-row-gap: 7px;
+                }
+
+                input {
+                    width: 350px;
+                    background-color: #F5F5F5;
+                }
+            }
+
+            .sign-up-link {
+                text-align: center;
+
+                span {
+                    color: $text-grey;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* Small screens (e.g., smartphones) */
+@media (max-width: 576px) {
+    .sign-in-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .geometry-section {
+            height: 40vh;
+            width: 100%;
+            clip-path: none;
+            justify-content: start;
+
+            .title {
+                font-size: 2rem;
+                text-align: center;
+                transform: translate(0, -100%);
+            }
+
+            .social-media-wrapper {
+                transform: translate(0, -50%);
+                bottom: 30px;
+            }
+        }
+
+        .form-section {
+            width: 100%;
+            margin-top: 10px;
+
+            .form-container {
+
+                .form-title-section {
+
+                    // Sign In
+                    h2 {
+                        font-size: 26px;
+                        font-weight: 700;
+                        line-height: 1px;
+                        word-wrap: break-word
+                    }
+
+                    // Sign in to your account
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        word-wrap: break-word
+                    }
+                }
+
+                .signing-btn-section {
+                    display: flex;
+                    flex-direction: column;
+
+                    button:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .form-card {
+                    width: 299px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .form {
+                        display: grid;
+                        grid-row-gap: 10px;
+
+                        .form-field-wrapper {
+                            display: grid;
+                            grid-row-gap: 5px;
+                        }
+
+                        input {
+                            width: auto;
+                        }
+
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+                .sign-up-link {
+                    font-size: 14px;
+
+                    span {
+                        color: $text-grey;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .sign-in-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+
+
+        .geometry-section {
+            height: 40vh;
+            width: 100%;
+            clip-path: none;
+
+            .title {
+                font-size: 2rem;
+                text-align: center;
+                transform: translate(0, -100%);
+            }
+
+            .social-media-wrapper {
+                transform: translate(0, -50%);
+                bottom: 30px;
+            }
+        }
+
+        .form-section {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .form-container {
+
+                .form-title-section {
+
+                    // Sign In
+                    h2 {
+                        font-size: 28px;
+                    }
+
+                    // Sign in to your account
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        word-wrap: break-word
+                    }
+                }
+
+                .signing-btn-section {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .form-card {
+                    width: 457px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .form {
+                        display: grid;
+                        grid-row-gap: 10px;
+
+                        .form-field-wrapper {
+                            display: grid;
+                            grid-row-gap: 5px;
+                        }
+
+                        input {
+                            width: 390px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+                .sign-up-link {
+                    font-size: 14px;
+
+                    span {
+                        color: $text-grey;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sign-in-page {
+        // display: flex;
+        // flex-direction: row;
+        // width: 100%;
+        // flex-wrap: wrap;
+
+        .geometry-section {
+            // height: 40vh;
+            // width: 100%;
+            // clip-path: none;
+
+            .title {
+                // font-size: 2rem;
+                // text-align: center;
+                // transform: translate(0, -100%);
+            }
+
+            .social-media-wrapper {
+                // transform: translate(0, -50%);
+                // bottom: 30px;
+            }
+        }
+
+        .form-section {
+
+            .form-container {
+
+                .form-title-section {
+
+                    // Sign In
+                    h2 {
+                        font-size: 26px;
+                    }
+
+                    // Sign in to your account
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .signing-btn-section {
+                    display: flex;
+                    flex-direction: column;
+
+                    button:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .form-card {
+                    width: 350px;
+
+                    .form {
+                        display: grid;
+                        grid-row-gap: 10px;
+
+                        .form-field-wrapper {
+                            display: grid;
+                            grid-row-gap: 5px;
+                        }
+
+                        input {
+                            width: 300px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+                .sign-up-link {
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+// /* Medium screens (e.g., tablets) */
+// @media (min-width: 1024px) {
+
+// }

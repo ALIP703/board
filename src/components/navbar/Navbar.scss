@@ -1,0 +1,25 @@
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    align-items: center;
+    padding-inline: 2rem;
+    justify-content: space-between;
+
+    div:first-child {
+        h3 {
+            text-transform: capitalize;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+
+    div:last-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:1rem
+    }
+}

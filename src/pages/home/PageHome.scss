@@ -1,0 +1,13 @@
+.grid-container {
+    /* Subtract the total padding (30px on top and 30px on the bottom) from 100vh */
+    height: calc(100vh - 60px);
+    padding: 30px;
+    display: grid;
+    box-sizing: content-box;
+    /* Use content-box to include padding in the specified height */
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "sidebar navbar"
+        "sidebar main";
+}

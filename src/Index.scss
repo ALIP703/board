@@ -1,0 +1,73 @@
+// Text colors
+$text-white: #ffff;
+$text-grey: #858585;
+$light-red: #f70202;
+$dark-yellow: #f6c604;
+$border-blue: #286DE0;
+
+// Background
+$bg-blue: linear-gradient(180deg, #4285F4 0%, #286DE0 100%);
+$bg-light-white:#F8FAFF;
+
+// fonts
+$primary-font: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$btn-font: Montserrat;
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  background-color: $bg-light-white;
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font-family: $btn-font;
+  border: 3px solid ;
+  border-color: transparent;
+
+  &:hover {
+    border: 3px solid $border-blue;
+    opacity: 0.9;
+  }
+}
+
+input {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding-left: 20px;
+  min-width: 250px;
+  min-height: 43px;
+  font-size: 16px;
+}
+
+input:focus-visible{
+  border: 1px solid red;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word
+}
+
+a {
+  color: $border-blue;
+  text-decoration: none;
+}
+
+//colors
+.primary {
+  background: $bg-blue;
+  color: $text-white
+}
+
+.error {
+  background: $light-red;
+}
+
+.warning {
+  background: $dark-yellow;
+}

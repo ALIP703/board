@@ -1,0 +1,9 @@
+input {
+    width: 197.6px;
+    height: 32.93px;
+
+    &:focus,
+    :active {
+        border-color: blue;
+    }
+}

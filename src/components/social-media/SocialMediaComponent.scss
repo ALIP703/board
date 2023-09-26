@@ -1,0 +1,26 @@
+.social-media-container {
+
+    .icon {
+        width: 28px;
+        height: 28px;
+        padding: 10px;
+        border-radius: 100%;
+        transition: 0.2s all;
+
+        &:hover{
+           transform: scale(1.1);
+        }
+    }
+
+}
+
+@media (min-width:320px) and (max-width: 576px) {
+    .social-media-container {
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    
+    }
+}

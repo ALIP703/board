@@ -1,0 +1,58 @@
+@import "../../Index.scss";
+@import "../../pages/public/auth/PageSignIn.scss";
+
+.sidebar {
+    height: 100%;
+    width: 280px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-inline-start: 30px;
+    grid-area: sidebar;
+
+    // App name
+    div {
+        @include app-name(36px);
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0em;
+    }
+
+    // main list
+    ul {
+        list-style: none;
+        transform: translateX(-14%);
+        display: grid;
+        grid-row-gap: 1rem;
+        overflow: auto;
+
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            padding: 0.5rem;
+
+            a {
+                color: inherit;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: 0.3s all;
+
+                &:hover {
+                    transform: translateX(3px);
+                }
+
+                &:focus,
+                :active {
+                    transform: translateX(4px);
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+}
