@@ -5,9 +5,16 @@
     display: grid;
     box-sizing: content-box;
     /* Use content-box to include padding in the specified height */
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 260px 1fr;
     grid-template-rows: 60px 1fr;
     grid-template-areas:
         "sidebar navbar"
         "sidebar main";
+}
+
+.main {
+    grid-area: main;
+    box-sizing: border-box;
+    padding-inline: 35px;
+    overflow: auto;
 }

@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     const [navbarTitle, setNavbarTitle] = useState<string>()
     
     React.useEffect(() => {
-        setNavbarTitle(location.pathname.split('/')[2])
+        setNavbarTitle(location.pathname.split('/')[2] ?? 'Dashboard')
     }, [location.pathname])
 
 

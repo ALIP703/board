@@ -5,9 +5,10 @@ import { SOCIAL_MEDIA_ICONS } from '../../../utils/helpers/constants/Constants'
 import GoogleIcon from "../../../assets/google.svg"
 import AppleIcon from "../../../assets/apple.svg"
 import Button from '../../../components/buttons/general-button/Button'
-import { Link } from "react-router-dom"
+import { Link, useNavigate, NavigateFunction } from "react-router-dom"
 
 const PageSignIn: React.FC = () => {
+  const navigate: NavigateFunction = useNavigate()
   return (
     <div className='sign-in-page'>
       <div className='geometry-section' >
@@ -55,7 +56,7 @@ const PageSignIn: React.FC = () => {
                 style={{
                   width: '100%',
                 }}
-                handleClick={() => { }} />
+                handleClick={() => navigate("/home")} />
             </form>
           </div>
 

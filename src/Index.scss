@@ -4,10 +4,19 @@ $text-grey: #858585;
 $light-red: #f70202;
 $dark-yellow: #f6c604;
 $border-blue: #286DE0;
+$box-shadow: #E0E0E0;
+$light-green: #98D89E;
+$light-brown: #debf85;
+$light-pink: #f0acacca;
+$light-violate: #A9B0E5;
+$positive: #E9F9EB;
+$negative: rgba(251, 5, 50, 0.807);
+
+
 
 // Background
 $bg-blue: linear-gradient(180deg, #4285F4 0%, #286DE0 100%);
-$bg-light-white:#F8FAFF;
+$bg-light-white: #F8FAFF;
 
 // fonts
 $primary-font: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -25,7 +34,7 @@ button {
   border: 0;
   cursor: pointer;
   font-family: $btn-font;
-  border: 3px solid ;
+  border: 3px solid;
   border-color: transparent;
 
   &:hover {
@@ -43,7 +52,7 @@ input {
   font-size: 16px;
 }
 
-input:focus-visible{
+input:focus-visible {
   border: 1px solid red;
 }
 
@@ -70,4 +79,32 @@ a {
 
 .warning {
   background: $dark-yellow;
+}
+
+.positive {
+  background: $positive;
+  color: #3CC952
+}
+
+.negative {
+  background: $negative ;
+  color: $text-white;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $bg-blue;
+  border-radius: 15pt;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $text-grey;
 }

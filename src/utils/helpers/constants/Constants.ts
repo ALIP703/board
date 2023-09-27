@@ -39,7 +39,7 @@ export const SIDEBAR_ITEMS: SidebarProps['sidebarItems'] = [
     {
         icon: dashboardIcon,
         item: 'Dashboard',
-        route: 'dashboard'
+        route: ''
     },
     {
         icon: transactionIcon,

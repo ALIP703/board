@@ -1,0 +1,10 @@
+@import "../../Index.scss";
+
+.card {
+    width: 237px;
+    height: 120px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: $text-white;
+    box-shadow: 1px 1px 5px 1px $box-shadow;
+}
